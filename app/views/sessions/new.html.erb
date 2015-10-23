@@ -1,0 +1,38 @@
+<h1>Log in</h1>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <%= form_for(:session, ural: login_path) do |f| %>
+        <!-- # <form action="/login class="new_session" id="new_session" method="post"> -->
+        
+            <%= f.label :email %>
+            <!-- # <label for="email">Email</label> -->
+            <%= f.email_field :email, class: 'form-control' %>
+            <!-- #
+                <style class="form-control" >
+                <input id="email" name="email" size="30" type="email" />
+                </style>
+            -->
+            
+            <%= f.label :password %>
+            <!-- # <label for="password">Password</label> -->
+            <%= f.password_field :password, class: 'form-control' %>
+            <!-- #
+                <style class="form-control" >
+                <input id="pass" name="pass" size="30" type="password" />
+                </style>
+            -->
+            
+            <%= f.submit "Log in", class: "btn btn-primary" %>
+            <!-- # 
+                <style class="btn btn-primary" >
+                <input type="submit" value="Login">
+                </style>
+            -->
+            
+        <% end %>
+        
+        <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+        <!-- <a href="/signup/path">Sign up now!</a> -->
+    </div>
+</div>
