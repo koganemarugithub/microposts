@@ -18,6 +18,14 @@ class UsersController < ApplicationController
     end
   end
   
+  def edit
+    @user = User.find(params[:id])
+  end
+  
+  def update
+  end
+  ## 上記部分まで課題
+  
   private
   
   def user_params

@@ -6,4 +6,11 @@ class User < ActiveRecord::Base
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
   has_secure_password
+  
+  # パスは6文字以上20文字以内
+  validates :password , length: { minimum: 6 , maximum: 20}
+  # お住まいは50文字以内
+  validates :location , numericality: { maximum:100 } 
+  # 内容は必須入力かつ２文字以上300文字以下
+  validates :profile , length: { maximum:300 }
 end
