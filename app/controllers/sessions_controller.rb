@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       ## passが正しい場合session[:user_id]にuserIDを入れる
       ## flashでコメントを表示後に@userにリダイレクト
       session[:user_id] = @user.id
-      flash[:info] = "logged in as #(@user.name)"
+      flash[:info] = "logged in as #{@user.name}"
       redirect_to @user
     else
       flash[:danger] = 'invalid email/password combination'

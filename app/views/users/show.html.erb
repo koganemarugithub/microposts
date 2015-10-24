@@ -2,3 +2,24 @@
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
+
+    <div class=contailner>
+      <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+             　  <tr>
+                  <th><%= label :email,:email %></th>
+                  <td><%= @user.email %></td>
+                </tr>
+                
+                <tr>
+                  <th><%= label :location, "住まい" %></th>
+                  <td> <%= @user.location %></td>
+                </tr>
+                
+                <tr>
+                  <th><%= label :profile, "自己紹介" %></th>
+                  <td> <%= @user.profile %></td>
+                </tr>
+            </table>
+      </div>
+    </div>
